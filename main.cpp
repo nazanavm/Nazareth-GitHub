@@ -55,33 +55,55 @@ int main() {
 // Agrega una nueva tarea al vector
 void agregarTarea(vector<tarea>&tareas){
     Tarea nueva;
+    
     cout << "Ingrese la tarea";
+    
     getline(cin,nueva.descripcion);
+    
     if (nueva.descripcion==""){
+        
         cout <<"La tarea no puede estar vacia";
     return;
 }
 nueva.completada == false;
+
 tareas.push_back(nueva);
+
 cout <<"Nueva tarea añadida correctamente";
  
 // Muestra todas las tareas
+
 void mostrarTareas(const vector<Tarea>& tareas) {
  cout << "Tareas";
+ 
  for (int i = 0; i < tareas.size(); i++){
      cout << i+1 << ".";
+     
      if (tareas[i].completada==true){
          cout << "Completada";
      } else {
          cout << "Pendiente";
      }
-     
+ }
      cout << tareas[i].descripcion << end1;
      }
  }
-}
 
-// Marca una tarea como completada
-// void completarTarea(vector<Tarea>& tareas) {
-// 
-// }
+
+    // Marca una tarea como completada
+     void completarTarea(vector<Tarea>& tareas) {
+    // Imprimir tareas
+    mostrarTareas (tareas);
+    // Cambiar tarea completa a true
+    int numeroTarea ;
+    cout << "Selecione la tarea completada: ";
+    cin >> numeroTarea;
+    
+    if (numeroTarea < 1 or numeroTarea > tareas.size()){
+        cout << "Tarea inválida";
+        
+        return;
+    }
+    tareas[numeroTarea - 1].completada = true;
+    cout << "Tarea completada correctamente" << endl;
+     }
