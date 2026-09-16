@@ -84,5 +84,3 @@ void agregarTarea(vector<Tarea>& tareas) {
 // void completarTarea(vector<Tarea>& tareas) {
 // 
 // }
-// 
-// }
