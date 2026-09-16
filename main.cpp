@@ -11,7 +11,7 @@ struct Tarea {
 };
 
 // Protoripos
-// void agregarTarea(vector<Tarea>& tareas);
+void agregarTarea(vector<Tarea>& tareas);
 // void mostrarTareas(const vector<Tarea>& tareas);
 // void completarTarea(vector<Tarea>& tareas);
 
@@ -53,16 +53,36 @@ int main() {
 }
 
 // Agrega una nueva tarea al vector
-// void agregarTarea(vector<Tarea>& tareas) {
+void agregarTarea(vector<Tarea>& tareas) {
+    tarea nueva;
+    
+    cout
 // 
 // }
 
 // Muestra todas las tareas
-// void mostrarTareas(const vector<Tarea>& tareas) {
+ void mostrarTareas(const vector<Tarea>& tareas) {
+     cout << "Tareas:";
+     
+     for (i= 0; i< tareas.size(); i++){
+         // Número. [Estado] descripcion
+        cout << i + 1 << "." ;
+        
+        if (tarea.completada == true){ 
+            cout << "[Completada]";
+        } else {
+            cout << "[Pendiente]";
+        }
+        
+        cout << tareas[i].descripcion << endl;
+       }
+     }
 // 
 // }
 
 // Marca una tarea como completada
 // void completarTarea(vector<Tarea>& tareas) {
+// 
+// }
 // 
 // }
