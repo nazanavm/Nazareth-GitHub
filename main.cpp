@@ -12,7 +12,7 @@ struct Tarea {
 
 // Protoripos
 void agregarTarea(vector<Tarea>& tareas);
-// void mostrarTareas(const vector<Tarea>& tareas);
+void mostrarTareas(const vector<Tarea>& tareas);
 // void completarTarea(vector<Tarea>& tareas);
 
 int main() {
@@ -32,10 +32,10 @@ int main() {
 
         switch (opcion) {
             case 1:
-                // agregarTarea(tareas);
+                agregarTarea(tareas);
                 break;
             case 2:
-                // mostrarTareas(tareas);
+                mostrarTareas(tareas);
                 break;
             case 3:
                 // completarTarea(tareas);
@@ -53,32 +53,33 @@ int main() {
 }
 
 // Agrega una nueva tarea al vector
-void agregarTarea(vector<Tarea>& tareas) {
-    tarea nueva;
-    
-    cout
-// 
-// }
-
+void agregarTarea(vector<tarea>&tareas){
+    Tarea nueva;
+    cout << "Ingrese la tarea";
+    getline(cin,nueva.descripcion);
+    if (nueva.descripcion==""){
+        cout <<"La tarea no puede estar vacia";
+    return;
+}
+nueva.completada == false;
+tareas.push_back(nueva);
+cout <<"Nueva tarea añadida correctamente";
+ 
 // Muestra todas las tareas
- void mostrarTareas(const vector<Tarea>& tareas) {
-     cout << "Tareas:";
-     
-     for (i= 0; i< tareas.size(); i++){
-         // Número. [Estado] descripcion
-        cout << i + 1 << "." ;
-        
-        if (tarea.completada == true){ 
-            cout << "[Completada]";
-        } else {
-            cout << "[Pendiente]";
-        }
-        
-        cout << tareas[i].descripcion << endl;
-       }
+void mostrarTareas(const vector<Tarea>& tareas) {
+ cout << "Tareas";
+ for (int i = 0; i < tareas.size(); i++){
+     cout << i+1 << ".";
+     if (tareas[i].completada==true){
+         cout << "Completada";
+     } else {
+         cout << "Pendiente";
      }
-// 
-// }
+     
+     cout << tareas[i].descripcion << end1;
+     }
+ }
+}
 
 // Marca una tarea como completada
 // void completarTarea(vector<Tarea>& tareas) {
